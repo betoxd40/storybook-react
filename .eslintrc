@@ -1,0 +1,12 @@
+{
+    "extends": ["standard", "standard-react", "plugin:prettier/recommended"],
+    "rules": {
+      "prettier/prettier": "error",
+      "no-param-reassign": "off",
+      "valid-jsdoc": "off",
+      "jsx-quotes": "off",
+      "semi": "off",
+      "react/propTypes": "off"
+    }
+  }
+  
