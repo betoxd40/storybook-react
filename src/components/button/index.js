@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StyledButton } from './styles';
-import { withTheme } from 'styled-components';
 
 const Button = ({ className, id, onClick, title, disabled }) => (
   <StyledButton
@@ -26,4 +25,4 @@ Button.defaultProps = {
   disabled: false,
 };
 
-export default withTheme(Button);
+export default Button;
