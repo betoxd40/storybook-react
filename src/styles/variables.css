@@ -1,0 +1,44 @@
+:root {
+    --blue: #388FC9;
+    --blue-hover: #3E9AD8;
+    --yellow: #E8B420;
+    --violet: #7F5D93;
+    --violet-dark: #142C3C;
+    --red: #940F08;
+    --pegnet-light: #0872B9;
+
+    --white: #FFF;
+    --black: #000;
+    --black-disabled: #A2A2A2;
+
+    --gray-bg-light: #F5F5F5;
+    --gray-bg-light-hover: #FAFAFA;
+    --gray-bg-dark: #F4F4F4;
+    --gray-stroke-light: #E9E9E9;
+    --gray-stroke-dark: #C3C3C3;
+    --gray-light: #7B7B7B;
+    --gray: #4A4A4A;
+
+    --gray-50: color(#000 lightness(50%));
+    --gray-60: color(#000 lightness(60%));
+
+    --app-bg: #FAFAFA;
+    --app-header-bg: var(--violet-dark);
+    --table-header-bg: #E8E8E8;
+
+    --content-width: 95%;
+    --content-max-width: 1400px;
+    --border-radius: 0.4rem;
+    --feedback-link-height: 4rem;
+    --default-table-padding: 8px;
+
+    --font: 'Montserrat', sans-serif;
+    --monospace-font: 'Roboto Mono', monospace;
+
+    @custom-media --up-to-extra-small-viewport-height (height <= 675px);
+    @custom-media --up-to-extra-small-viewport (width <= 544px);
+    @custom-media --up-to-small-viewport (width <= 768px);
+    @custom-media --up-to-medium-viewport (width <= 992px);
+
+    --disabled-opacity: 0.35;
+}
