@@ -18,6 +18,9 @@ Button.propTypes = {
   id: PropTypes.string,
   title: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
+  /**
+   When a button is in the loading state you can supply custom text
+  */
   disabled: PropTypes.bool,
 };
 
@@ -25,4 +28,4 @@ Button.defaultProps = {
   disabled: false,
 };
 
-export default Button;
+export { Button };
