@@ -1,23 +1,31 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs/react';
-import Anchor from './index';
+import { text } from '@storybook/addon-knobs';
+import { Anchor } from './index';
 
-const stories = storiesOf('Anchor', module);
+export default {
+  title: 'Anchor',
+  component: Anchor,
+};
 
-stories.addDecorator(withKnobs);
+export const defaultState = () => (
+  <>
+    <Anchor text={'Link text'} />
+  </>
+);
 
-stories.add('default', () => {
-  return <Anchor/>;
-});
+export const withHref = () => (
+  <>
+    <Anchor
+      onClick={action('click')}
+      to={'https://www.factom.com/'}
+      text={'Link with href'}
+    />
+  </>
+);
 
-stories.add('disabled', () => {
-  return <Anchor onClick={action('click')} title="Default Anchor" disabled />;
-});
-
-stories.add('playground', () => {
-  const title = text('children', 'hello world !');
-  const disabled = boolean('Disabled', false);
-  return <Anchor onClick={action('click')} title={title} disabled={disabled} />;
-});
+export const playground = () => {
+  const title = text('text', 'hello world');
+  const href = text('href', 'https://www.factom.com/');
+  return <Anchor onClick={action('click')} to={href} text={title} />;
+};
